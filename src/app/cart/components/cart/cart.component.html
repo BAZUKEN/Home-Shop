@@ -1,0 +1,23 @@
+
+<!-- <div class="cart">
+    <h2>Товары в корзине:</h2>
+    <app-cart-item *ngFor="let item of items" [item]="item"></app-cart-item>
+  </div> -->
+
+<div class="cart mt-5">
+  <table class="table table-light">
+      <thead>
+        <tr>
+          <th scope="col" class="w-5">id</th>
+          <th scope="col">Название</th>
+          <th scope="col" class="w-10">Цена</th>
+          <th scope="col" class="w-10">Количество</th>
+          <th scope="col" class="w-10 text-center">Удалить</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr app-cart-item *ngFor="let item of items" [item]="item"></tr>
+      </tbody>
+    </table>
+</div>
+<button type="button" class="btn btn-success">Оформить заказ</button>

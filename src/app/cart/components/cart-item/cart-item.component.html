@@ -1,0 +1,22 @@
+  <!-- <ul class="cart-item list-group">
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-1">id: {{item.id}}</div>
+        <div class="col-6">{{item.name}}</div>
+        <div class="col-2">{{item.price}}</div>
+        <div class="col-2">{{item.quantity}}</div>
+        <div class="col-1">Удалить</div>
+      </div>
+    </li>
+  </ul> -->
+
+
+<th scope="row">{{item.id}}</th>
+<td>{{item.name}}</td>
+<td>{{item.price}}</td>
+<td>{{item.quantity}}</td>
+<th>
+  <button type="button" class="close container-fluid" aria-label="Close" (click)="onDelete()">
+    <span class="" aria-hidden="true">&times;</span>
+  </button>
+</th>

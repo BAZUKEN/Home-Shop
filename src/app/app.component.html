@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="" class="home navbar-brand">Магазин</a>
+    <div class="navbar-nav container-fluid justify-content-start">
+        <a class="nav-item nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Home <span class="sr-only"></span></a>
+        <a class="nav-item nav-link" [routerLink]="['/shop']" routerLinkActive="router-link-active">Shop</a>
+    </div>
+    <div class="btn-group" dropdown>
+        <button type="button" class="btn btn-danger" [routerLink]="['/cart']" routerLinkActive="router-link-active" ><fa name="shopping-cart" animation=""></fa></button>
+        <button id="button-split" type="button" dropdownToggle class="btn btn-danger dropdown-toggle dropdown-toggle-split" aria-controls="dropdown-split">
+          <span class="caret"></span>
+          <span class="sr-only">Split button!</span>
+        </button>
+        <ul id="dropdown-split" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-split">
+            <!-- <li *ngFor="let item of items" [item]="item" role="menuitem">
+                <a class="dropdown-item" href="#">{{item.id}}</a>
+            </li> -->
+            <li app-cart-item *ngFor="let item of items" [item]="item"></li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

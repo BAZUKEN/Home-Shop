@@ -1,0 +1,9 @@
+<div class="book card" style="width: 18rem;" >
+  <img class="card-img-top" src="/assets/images/{{book.img}}">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{book.name}}</h5>
+    <p class="card-text">Цена: {{book.price}} грн.</p>
+    <p class="card-text text-uppercase" *ngIf="book.capacity === 0">Товар закончился</p>
+    <a (click)="buyIt($event)"class="btn btn-primary btn-block text-white">Купить</a>
+  </div>
+</div>
